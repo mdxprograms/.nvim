@@ -97,7 +97,6 @@ nnoremap <leader>u :UndotreeShow<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
-nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
 nnoremap <Leader><Leader> :e ~/.config/nvim/init.vim<CR>
 
 " Buffers
@@ -111,7 +110,7 @@ vnoremap K :m '<-2<CR>gv=gv
 
 " Coc commands
 command! -nargs=0 FmtJS :CocCommand eslint.executeAutofix
-autocmd BufWritePre *.js :FmtJS<CR>
+autocmd BufWritePre *.js :FmtJS
 
 inoremap <silent><expr> <C-space> coc#refresh()
 
