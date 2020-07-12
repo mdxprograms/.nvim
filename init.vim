@@ -56,6 +56,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'mattn/emmet-vim'
 Plug 'Olical/conjure'
 Plug 'ncm2/float-preview.nvim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'
 
 call plug#end()
 """ END PLUGINS
@@ -64,6 +66,9 @@ set colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=cyan
 colorscheme dracula
 set background=dark
+
+" Rainbow parens
+let g:rainbow_active = 1
 
 if executable('rg')
   let g:rg_derive_root='true'
