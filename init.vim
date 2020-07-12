@@ -38,6 +38,7 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
+""" PLUGINS
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -54,6 +55,7 @@ Plug 'honza/vim-snippets'
 Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
+""" END PLUGINS
 
 set colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=cyan
@@ -71,19 +73,19 @@ let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
-
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <Leader>ps :Rg<SPACE>
+nnoremap <Leader>pp :GFiles<CR>
+nnoremap <Leader>pf :Files<CR>
+nnoremap <Leader>pl :CocList project<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-nnoremap <Leader>ps :Rg<SPACE>
-nnoremap <Leader>pp :GFiles<CR>
-nnoremap <Leader>pf :Files<CR>
 nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
@@ -95,6 +97,12 @@ nnoremap <Leader>fs :w<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" Coc commands
+command! -nargs=0 FmtJS :CocCommand eslint.executeAutofix
+autocmd BufWritePre *.js :FmtJS<CR>
+
+inoremap <silent><expr> <C-space> coc#refresh()
+
 vnoremap X "_d
 inoremap jf <esc>
 
@@ -103,8 +111,6 @@ function! s:check_back_space() abort
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
-command! -nargs=0 FmtJS :CocCommand eslint.executeAutofix
-inoremap <silent><expr> <C-space> coc#refresh()
 
 " GoTo code navigation.
 nmap <leader>gd <Plug>(coc-definition)
@@ -118,13 +124,13 @@ nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart<CR>
 
+
 " Sweet Sweet FuGITive
 nmap <leader>gh :diffget //3<CR>
 nmap <leader>gu :diffget //2<CR>
-nmap <leader>gs :G<CR>
-
-" toggle terminal
-nnoremap <Leader>t <Plug>(coc-terminal-toggle)
+nmap <leader>gp :Gpush<space>
+nmap <leader>gl :Gpull<space>
+nmap <leader>gs :Gstatus<CR>
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
