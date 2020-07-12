@@ -53,6 +53,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'mattn/emmet-vim'
+Plug 'Olical/conjure'
+Plug 'ncm2/float-preview.nvim'
 
 call plug#end()
 """ END PLUGINS
@@ -91,9 +94,13 @@ nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader>ee oif err != nil {<CR>log.Fatalf("%+v\n", err)<CR>}<CR><esc>kkI<esc>
 nnoremap <Leader><Leader> :e ~/.config/nvim/init.vim<CR>
+
+" Buffers
 nnoremap <Leader><tab> :b#<CR>
 nnoremap <Leader>bd :bd!<CR>
+nnoremap <Leader>br :Buffers<CR>
 nnoremap <Leader>fs :w<CR>
+
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
@@ -144,3 +151,8 @@ augroup highlight_yank
 augroup END
 
 autocmd BufWritePre * :call TrimWhitespace()
+
+" Remember last position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
