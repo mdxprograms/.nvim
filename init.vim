@@ -38,9 +38,6 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
-set colorcolumn=81
-highlight ColorColumn ctermbg=0 guibg=cyan
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -58,7 +55,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
-" colorscheme gruvbox
+set colorcolumn=81
+highlight ColorColumn ctermbg=0 guibg=cyan
+colorscheme dracula
 set background=dark
 
 if executable('rg')
@@ -72,7 +71,6 @@ let g:netrw_browse_split = 2
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
-colorscheme dracula
 
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
