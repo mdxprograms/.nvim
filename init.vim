@@ -6,27 +6,28 @@ endif
 
 syntax on
 
-set guicursor=
-set noshowmatch
-set relativenumber
-set nohlsearch
-set hidden
-set noerrorbells
-set tabstop=2 softtabstop=2
-set shiftwidth=2
 set expandtab
-set smartindent
-set nu
-set nowrap
-set smartcase
-set noswapfile
+set guicursor=
+set hidden
+set incsearch
 set nobackup
+set backupcopy=yes
+set noerrorbells
+set nohlsearch
+set noshowmatch
+set noshowmode
+set noswapfile
+set nowrap
+set nu
+set relativenumber
+set scrolloff=8
+set shiftwidth=2
+set smartcase
+set smartindent
+set tabstop=2 softtabstop=2
+set termguicolors
 set undodir=~/.config/nvim/undodir
 set undofile
-set incsearch
-set termguicolors
-set scrolloff=8
-set noshowmode
 
 " Give more space for displaying messages.
 set cmdheight=2
