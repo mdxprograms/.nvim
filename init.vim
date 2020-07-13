@@ -75,7 +75,9 @@ Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'ncm2/float-preview.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
+Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
@@ -93,6 +95,7 @@ set background=dark
 " Rainbow parens
 let g:rainbow_active = 1
 
+" Enable ripgrep if available
 if executable('rg')
   let g:rg_derive_root='true'
 endif
@@ -100,10 +103,7 @@ endif
 let loaded_matchparen = 1
 let mapleader = " "
 
-let g:netrw_browse_split = 2
-let g:netrw_banner = 0
-let g:netrw_winsize = 25
-
+" Base mappings
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>
@@ -121,34 +121,24 @@ nnoremap <Leader>+ :vertical resize +5<CR>
 nnoremap <Leader>- :vertical resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader><Leader> :e ~/.config/nvim/init.vim<CR>
+inoremap jf <esc>
 
-" Buffers
+" Buffers mappings
 nnoremap <Leader><tab> :b#<CR>
 nnoremap <Leader>bd :bd!<CR>
 nnoremap <Leader>br :Buffers<CR>
 nnoremap <Leader>fs :w<CR>
 
+" Line mappings
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 inoremap <silent><expr> <C-space> coc#refresh()
 
-vnoremap X "_d
-inoremap jf <esc>
-
-" coc-snippets
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-
 function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
-
-let g:coc_snippet_next = '<tab>'
 
 
 " GoTo code navigation.
@@ -171,18 +161,20 @@ nmap <leader>gp :Gpush<space>
 nmap <leader>gl :Gpull<space>
 nmap <leader>gs :Gstatus<CR>
 
+" nerd commenter
+let g:NERDSpaceDelims = 1
+
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
+autocmd BufWritePre * :call TrimWhitespace()
 
 augroup highlight_yank
     autocmd!
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 50)
 augroup END
-
-autocmd BufWritePre * :call TrimWhitespace()
 
 " Remember last position
 if has("autocmd")
