@@ -39,6 +39,25 @@ set updatetime=50
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
+" CocExtensions
+let g:coc_global_extensions = [
+\ 'coc-conjure-olical',
+\ 'coc-css',
+\ 'coc-emmet',
+\ 'coc-eslint',
+\ 'coc-highlight',
+\ 'coc-html',
+\ 'coc-json',
+\ 'coc-marketplace',
+\ 'coc-prettier',
+\ 'coc-python',
+\ 'coc-snippets',
+\ 'coc-tailwindcss',
+\ 'coc-tsserver',
+\ 'coc-ultisnips',
+\ 'coc-yaml'
+\ ]
+
 """ PLUGINS
 call plug#begin('~/.vim/plugged')
 
@@ -109,19 +128,24 @@ nnoremap <Leader>fs :w<CR>
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" Coc commands
-command! -nargs=0 Prettier :CocCommand eslint.executeAutofix
-autocmd BufWritePre *.js :Prettier
-
 inoremap <silent><expr> <C-space> coc#refresh()
 
 vnoremap X "_d
 inoremap jf <esc>
 
+" coc-snippets
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? coc#_select_confirm() :
+      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
+
 function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 
 " GoTo code navigation.

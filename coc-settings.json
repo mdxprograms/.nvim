@@ -1,3 +1,5 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html"]
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html"],
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "npm"
 }
