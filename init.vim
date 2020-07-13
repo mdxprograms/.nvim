@@ -110,8 +110,8 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " Coc commands
-command! -nargs=0 FmtJS :CocCommand eslint.executeAutofix
-autocmd BufWritePre *.js :FmtJS
+command! -nargs=0 Prettier :CocCommand eslint.executeAutofix
+autocmd BufWritePre *.js :Prettier
 
 inoremap <silent><expr> <C-space> coc#refresh()
 
