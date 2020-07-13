@@ -12,6 +12,7 @@ set hidden
 set incsearch
 set nobackup
 set backupcopy=yes
+set mouse=
 set noerrorbells
 set nohlsearch
 set noshowmatch
@@ -50,6 +51,7 @@ let g:coc_global_extensions = [
 \ 'coc-json',
 \ 'coc-marketplace',
 \ 'coc-prettier',
+\ 'coc-project',
 \ 'coc-python',
 \ 'coc-snippets',
 \ 'coc-tailwindcss',
@@ -61,23 +63,24 @@ let g:coc_global_extensions = [
 """ PLUGINS
 call plug#begin('~/.vim/plugged')
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-fugitive'
-Plug 'vim-utils/vim-man'
-Plug 'mbbill/undotree'
-Plug 'sheerun/vim-polyglot'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-dispatch'
-Plug 'vim-airline/vim-airline'
-Plug 'airblade/vim-gitgutter'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'mattn/emmet-vim'
 Plug 'Olical/conjure'
-Plug 'ncm2/float-preview.nvim'
+Plug 'SirVer/ultisnips'
+Plug 'airblade/vim-gitgutter'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
+Plug 'mattn/emmet-vim'
+Plug 'mbbill/undotree'
+Plug 'ncm2/float-preview.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ryanoasis/vim-devicons'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-utils/vim-man'
 
 call plug#end()
 """ END PLUGINS
