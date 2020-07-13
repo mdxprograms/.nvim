@@ -164,6 +164,11 @@ nmap <leader>gs :Gstatus<CR>
 " nerd commenter
 let g:NERDSpaceDelims = 1
 
+" nerdtree
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeMinimalUI = 1
+nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
+
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
