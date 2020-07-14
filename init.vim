@@ -170,6 +170,9 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
 
+" markdown preview
+let g:mkdp_auto_start = 1
+
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
