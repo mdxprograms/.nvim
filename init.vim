@@ -74,6 +74,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'metakirby5/codi.vim'
 Plug 'ncm2/float-preview.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
