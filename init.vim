@@ -6,13 +6,13 @@ endif
 
 syntax on
 
+set backupcopy=yes
 set expandtab
 set guicursor=
 set hidden
 set incsearch
-set nobackup
-set backupcopy=yes
 set mouse=
+set nobackup
 set noerrorbells
 set nohlsearch
 set noshowmatch
@@ -25,6 +25,8 @@ set scrolloff=8
 set shiftwidth=2
 set smartcase
 set smartindent
+set splitbelow
+set splitright
 set tabstop=2 softtabstop=2
 set termguicolors
 set undodir=~/.config/nvim/undodir
