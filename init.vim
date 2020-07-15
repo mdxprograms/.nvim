@@ -6,13 +6,13 @@ endif
 
 syntax on
 
+set backupcopy=yes
 set expandtab
 set guicursor=
 set hidden
 set incsearch
-set nobackup
-set backupcopy=yes
 set mouse=
+set nobackup
 set noerrorbells
 set nohlsearch
 set noshowmatch
@@ -25,6 +25,8 @@ set scrolloff=8
 set shiftwidth=2
 set smartcase
 set smartindent
+set splitbelow
+set splitright
 set tabstop=2 softtabstop=2
 set termguicolors
 set undodir=~/.config/nvim/undodir
@@ -74,6 +76,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'metakirby5/codi.vim'
 Plug 'ncm2/float-preview.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
