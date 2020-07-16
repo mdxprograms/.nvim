@@ -192,3 +192,8 @@ augroup END
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
+
+" term
+""" escape
+tnoremap <esc> <c-\><c-n>
+
