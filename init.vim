@@ -77,6 +77,7 @@ Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'metakirby5/codi.vim'
+Plug 'nathanaelkane/vim-indent-guides'
 Plug 'ncm2/float-preview.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
@@ -196,4 +197,7 @@ endif
 " term
 """ escape
 tnoremap <esc> <c-\><c-n>
+
+" indent guide
+let g:indent_guides_enable_on_vim_startup = 1
 
