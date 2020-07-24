@@ -1,5 +1,6 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "html", "javascript"],
   "eslint.packageManager": "npm",
-  "eslint.autoFix": true
+  "eslint.autoFix": true,
+  "prettier.eslintIntegration": true
 }
