@@ -48,7 +48,6 @@ let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-emmet',
 \ 'coc-eslint',
-\ 'coc-highlight',
 \ 'coc-html',
 \ 'coc-json',
 \ 'coc-marketplace',
