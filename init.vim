@@ -86,6 +86,7 @@ Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-utils/vim-man'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 """ END PLUGINS
