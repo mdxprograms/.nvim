@@ -8,6 +8,7 @@ syntax on
 
 set backupcopy=yes
 set expandtab
+set formatoptions-=cro
 set guicursor=
 set hidden
 set incsearch
