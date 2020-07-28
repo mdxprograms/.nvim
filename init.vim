@@ -202,7 +202,7 @@ let g:ranger_map_keys = 0
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-nnoremap <silent> <leader>r :FloatermNew ranger<CR>
+nnoremap <silent> <leader>r :FloatermNew ranger --cmd "set show_hidden=true"<CR>
 
 " Floatterm
 nnoremap <leader>tn :FloatermNew<CR>
