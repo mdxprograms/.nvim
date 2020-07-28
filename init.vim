@@ -192,10 +192,6 @@ if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-" term
-""" escape
-tnoremap <esc> <c-\><c-n>
-
 " indent guide
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
@@ -206,7 +202,7 @@ let g:ranger_map_keys = 0
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-nnoremap <leader>r :RangerWorkingDirectory<CR>
+nnoremap <silent> <leader>r :FloatermNew ranger<CR>
 
 " Floatterm
 nnoremap <leader>tn :FloatermNew<CR>
