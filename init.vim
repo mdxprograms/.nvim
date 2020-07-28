@@ -205,6 +205,8 @@ let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 nnoremap <silent> <leader>r :FloatermNew ranger --cmd "set show_hidden=true"<CR>
 
 " Floatterm
+let g:floaterm_autoinsert = 0
+let g:floaterm_position = 'top'
 nnoremap <leader>tn :FloatermNew<CR>
 nnoremap <leader>tt :FloatermToggle<CR>
 nnoremap <leader>tl :FloatermNext<CR>
