@@ -207,6 +207,8 @@ nnoremap <silent> <leader>r :FloatermNew ranger --cmd "set show_hidden=true"<CR>
 " Floatterm
 nnoremap <leader>tn :FloatermNew<CR>
 nnoremap <leader>tt :FloatermToggle<CR>
+nnoremap <leader>tl :FloatermNext<CR>
+nnoremap <leader>th :FloatermPrev<CR>
 
 " custom files
 nnoremap <Leader>nw :e ~/Dropbox/work_notes<CR>
