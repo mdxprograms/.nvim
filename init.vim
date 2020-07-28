@@ -75,9 +75,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
-Plug 'metakirby5/codi.vim'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'ncm2/float-preview.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'ryanoasis/vim-devicons'
@@ -88,6 +86,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-utils/vim-man'
 Plug 'tpope/vim-surround'
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 """ END PLUGINS
@@ -172,7 +173,7 @@ let g:NERDSpaceDelims = 1
 " nerdtree
 let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
-nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>pt :NERDTreeToggle<CR>
 
 fun! TrimWhitespace()
     let l:save = winsaveview()
@@ -199,6 +200,17 @@ tnoremap <esc> <c-\><c-n>
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
+
+" ranger
+let g:ranger_map_keys = 0
+let g:NERDTreeHijackNetrw = 0
+let g:ranger_replace_netrw = 1
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+nnoremap <leader>r :RangerWorkingDirectory<CR>
+
+" Floatterm
+nnoremap <leader>tn :FloatermNew<CR>
+nnoremap <leader>tt :FloatermToggle<CR>
 
 " custom files
 nnoremap <Leader>nw :e ~/Dropbox/work_notes<CR>
