@@ -161,8 +161,6 @@ nnoremap <leader>cr :CocRestart<CR>
 
 
 " Sweet Sweet FuGITive
-nmap <leader>gh :diffget //3<CR>
-nmap <leader>gu :diffget //2<CR>
 nmap <leader>gp :Gpush<space>
 nmap <leader>gl :Gpull<space>
 nmap <leader>gs :Gstatus<CR>
@@ -202,18 +200,18 @@ let g:ranger_map_keys = 0
 let g:NERDTreeHijackNetrw = 0
 let g:ranger_replace_netrw = 1
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-nnoremap <silent> <leader>r :FloatermNew ranger --cmd "set show_hidden=true"<CR>
+nnoremap <silent> <leader>r :FloatermNew --height=0.9 width=0.9 ranger --cmd "set show_hidden=true"<CR>
 
 " Floatterm
 let g:floaterm_autoinsert = 0
-let g:floaterm_position = 'topright'
-let g:floaterm_height = 0.3
+let g:floaterm_position = 'top'
 hi FloatermBorder guibg=#44475a guifg=#ff79cc6
 hi FloatermNC guibg=#282a36
-nnoremap <leader>tn :FloatermNew<CR>
+nnoremap <leader>at :FloatermNew<CR>
 nnoremap <leader>tt :FloatermToggle<CR>
 nnoremap <leader>tl :FloatermNext<CR>
 nnoremap <leader>th :FloatermPrev<CR>
+nnoremap <leader>vaq :FloatermNew vaq<CR>
 
 " custom files
 nnoremap <Leader>nw :e ~/Dropbox/work_notes<CR>
