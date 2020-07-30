@@ -89,6 +89,7 @@ Plug 'tpope/vim-surround'
 Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'voldikss/vim-floaterm'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 """ END PLUGINS
