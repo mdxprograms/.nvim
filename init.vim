@@ -90,6 +90,7 @@ Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'mhinz/vim-startify'
+Plug 'stephenway/postcss.vim'
 
 call plug#end()
 """ END PLUGINS
