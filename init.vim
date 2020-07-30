@@ -32,6 +32,7 @@ set tabstop=2 softtabstop=2
 set termguicolors
 set undodir=~/.config/nvim/undodir
 set undofile
+set clipboard=unnamedplus
 
 " Give more space for displaying messages.
 set cmdheight=2
