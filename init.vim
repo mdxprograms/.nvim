@@ -216,5 +216,8 @@ nnoremap <leader>tl :FloatermNext<CR>
 nnoremap <leader>th :FloatermPrev<CR>
 nnoremap <leader>vaq :FloatermNew vaq<CR>
 
+" FZF
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5, 'highlight': 'Comment' } }
+
 " custom files
 nnoremap <Leader>nw :e ~/Dropbox/work_notes<CR>
