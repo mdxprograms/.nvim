@@ -92,6 +92,7 @@ Plug 'rbgrouleff/bclose.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'mhinz/vim-startify'
 Plug 'stephenway/postcss.vim'
+Plug 'alaviss/nim.nvim'
 
 call plug#end()
 """ END PLUGINS
