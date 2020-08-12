@@ -133,6 +133,9 @@ nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader><Leader> :e ~/.config/nvim/init.vim<CR>
 inoremap jf <esc>
 
+" match escape for terminal as well
+tnoremap <silent> jf <C-\><C-n>
+
 " Buffers mappings
 nnoremap <Leader><tab> :b#<CR>
 nnoremap <Leader>bd :bd!<CR>
