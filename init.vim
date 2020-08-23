@@ -93,6 +93,7 @@ Plug 'voldikss/vim-floaterm'
 Plug 'mhinz/vim-startify'
 Plug 'stephenway/postcss.vim'
 Plug 'alaviss/nim.nvim'
+Plug 'leafo/moonscript-vim'
 
 call plug#end()
 """ END PLUGINS
