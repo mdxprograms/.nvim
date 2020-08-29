@@ -50,6 +50,7 @@ let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-emmet',
 \ 'coc-eslint',
+\ 'coc-go',
 \ 'coc-html',
 \ 'coc-json',
 \ 'coc-lua',
@@ -72,31 +73,32 @@ call plug#begin('~/.vim/plugged')
 Plug 'Olical/conjure'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
+Plug 'alaviss/nim.nvim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'francoiscabrol/ranger.vim'
 Plug 'honza/vim-snippets'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
+Plug 'leafo/moonscript-vim'
 Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
+Plug 'mhinz/vim-startify'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
+Plug 'rbgrouleff/bclose.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
+Plug 'stephenway/postcss.vim'
 Plug 'tpope/vim-dispatch'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-utils/vim-man'
-Plug 'tpope/vim-surround'
-Plug 'francoiscabrol/ranger.vim'
-Plug 'rbgrouleff/bclose.vim'
 Plug 'voldikss/vim-floaterm'
-Plug 'mhinz/vim-startify'
-Plug 'stephenway/postcss.vim'
-Plug 'alaviss/nim.nvim'
-Plug 'leafo/moonscript-vim'
 
 call plug#end()
 """ END PLUGINS
