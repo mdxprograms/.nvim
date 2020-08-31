@@ -74,7 +74,6 @@ Plug 'Olical/conjure'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'alaviss/nim.nvim'
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'francoiscabrol/ranger.vim'
 Plug 'honza/vim-snippets'
@@ -85,6 +84,7 @@ Plug 'luochen1990/rainbow'
 Plug 'mattn/emmet-vim'
 Plug 'mbbill/undotree'
 Plug 'mhinz/vim-startify'
+Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
@@ -105,7 +105,7 @@ call plug#end()
 
 set colorcolumn=81
 highlight ColorColumn ctermbg=0 guibg=cyan
-colorscheme dracula
+colorscheme gruvbox
 set background=dark
 
 " Rainbow parens
@@ -191,16 +191,19 @@ fun! TrimWhitespace()
     keeppatterns %s/\s\+$//e
     call winrestview(l:save)
 endfun
-autocmd BufWritePre * :call TrimWhitespace()
-
-augroup highlight_yank
-    autocmd!
-    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 50)
-augroup END
 
 " Remember last position
 if has("autocmd")
   au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+  au BufWritePre * :call TrimWhitespace()
+
+  augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank("IncSearch", 50)
+  augroup END
+
+  au BufNewFile,BufRead *.gohtml set syntax=gohtmltmpl
 endif
 
 " indent guide
