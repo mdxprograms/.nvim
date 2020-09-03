@@ -7,6 +7,7 @@ endif
 syntax on
 
 set backupcopy=yes
+set clipboard=unnamedplus
 set expandtab
 set formatoptions-=cro
 set guicursor=
@@ -26,13 +27,13 @@ set scrolloff=8
 set shiftwidth=2
 set smartcase
 set smartindent
+set spell spelllang=en_us
 set splitbelow
 set splitright
 set tabstop=2 softtabstop=2
 set termguicolors
 set undodir=~/.config/nvim/undodir
 set undofile
-set clipboard=unnamedplus
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -177,7 +178,7 @@ nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart<CR>
 
 
-" Sweet Sweet FuGITive
+" Sweet Sweet Fugitive
 nmap <leader>gp :Gpush<space>
 nmap <leader>gl :Gpull<space>
 nmap <leader>gs :Gstatus<CR>
