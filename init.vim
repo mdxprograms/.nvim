@@ -76,7 +76,6 @@ Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'alaviss/nim.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'francoiscabrol/ranger.vim'
 Plug 'heavenshell/vim-jsdoc', {
       \ 'for': ['javascript', 'javascript.jsx','typescript'],
       \ 'do': 'make install'
@@ -93,7 +92,6 @@ Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
-Plug 'rbgrouleff/bclose.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
@@ -215,13 +213,6 @@ endif
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
-
-" ranger
-let g:ranger_map_keys = 0
-let g:NERDTreeHijackNetrw = 0
-let g:ranger_replace_netrw = 1
-let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-nnoremap <silent> <leader>r :FloatermNew --height=0.9 width=0.9 ranger --cmd "set show_hidden=true"<CR>
 
 " Floatterm
 let g:floaterm_autoinsert = 0
