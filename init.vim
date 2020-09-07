@@ -34,7 +34,6 @@ Plug 'morhetz/gruvbox'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
-Plug 'rbgrouleff/bclose.vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'stephenway/postcss.vim'
@@ -116,7 +115,7 @@ nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nnoremap <leader>cr :CocRestart<CR>
 
 
-" Sweet Sweet FuGITive
+" Fugitive
 nmap <leader>gp :Gpush<space>
 nmap <leader>gl :Gpull<space>
 nmap <leader>gs :Gstatus<CR>
