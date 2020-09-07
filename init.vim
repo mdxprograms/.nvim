@@ -6,68 +6,11 @@ endif
 
 syntax on
 
-set backupcopy=yes
-set expandtab
-set formatoptions-=cro
-set guicursor=
-set hidden
-set incsearch
-set mouse=
-set nobackup
-set noerrorbells
-set nohlsearch
-set noshowmatch
-set noshowmode
-set noswapfile
-set nowrap
-set nu
-set relativenumber
-set scrolloff=8
-set shiftwidth=2
-set smartcase
-set smartindent
-set splitbelow
-set splitright
-set tabstop=2 softtabstop=2
-set termguicolors
-set undodir=~/.config/nvim/undodir
-set undofile
-set clipboard=unnamedplus
-
-" Give more space for displaying messages.
-set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=50
-
-" Don't pass messages to |ins-completion-menu|.
-set shortmess+=c
-
-" CocExtensions
-let g:coc_global_extensions = [
-\ 'coc-conjure-olical',
-\ 'coc-css',
-\ 'coc-emmet',
-\ 'coc-eslint',
-\ 'coc-go',
-\ 'coc-html',
-\ 'coc-json',
-\ 'coc-lua',
-\ 'coc-marketplace',
-\ 'coc-prettier',
-\ 'coc-project',
-\ 'coc-python',
-\ 'coc-rls',
-\ 'coc-rust-analyzer',
-\ 'coc-snippets',
-\ 'coc-tailwindcss',
-\ 'coc-tsserver',
-\ 'coc-ultisnips',
-\ 'coc-yaml'
-\ ]
+" default base settings
+source settings/base.vim
 
 """ PLUGINS
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'Olical/conjure'
@@ -75,7 +18,6 @@ Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'alaviss/nim.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'francoiscabrol/ranger.vim'
 Plug 'heavenshell/vim-jsdoc', {
       \ 'for': ['javascript', 'javascript.jsx','typescript'],
       \ 'do': 'make install'
@@ -94,7 +36,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdcommenter'
 Plug 'rbgrouleff/bclose.vim'
 Plug 'ryanoasis/vim-devicons'
-Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'stephenway/postcss.vim'
 Plug 'tpope/vim-dispatch'
@@ -102,15 +43,13 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-utils/vim-man'
-Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 """ END PLUGINS
 
-set colorcolumn=81
-highlight ColorColumn ctermbg=0 guibg=cyan
-colorscheme gruvbox
-set background=dark
+" settings
+source settings/coc.vim
+source settings/colors.vim
 
 " Rainbow parens
 let g:rainbow_active = 1
@@ -185,11 +124,6 @@ nmap <leader>gs :Gstatus<CR>
 " nerd commenter
 let g:NERDSpaceDelims = 1
 
-" nerdtree
-let g:NERDTreeShowHidden = 1
-let g:NERDTreeMinimalUI = 1
-nnoremap <silent> <Leader>pt :NERDTreeToggle<CR>
-
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
@@ -214,24 +148,6 @@ endif
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
-
-" ranger
-let g:ranger_map_keys = 0
-let g:NERDTreeHijackNetrw = 0
-let g:ranger_replace_netrw = 1
-let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-nnoremap <silent> <leader>r :FloatermNew --height=0.9 width=0.9 ranger --cmd "set show_hidden=true"<CR>
-
-" Floatterm
-let g:floaterm_autoinsert = 0
-let g:floaterm_position = 'top'
-hi FloatermBorder guibg=#44475a guifg=#ff79cc6
-hi FloatermNC guibg=#282a36
-nnoremap <leader>at :FloatermNew<CR>
-nnoremap <leader>tt :FloatermToggle<CR>
-nnoremap <leader>tl :FloatermNext<CR>
-nnoremap <leader>th :FloatermPrev<CR>
-nnoremap <leader>vaq :FloatermNew vaq<CR>
 
 " FZF
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5, 'highlight': 'Comment' } }
