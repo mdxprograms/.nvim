@@ -4,6 +4,7 @@ let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-emmet',
 \ 'coc-eslint',
+\ 'coc-explorer',
 \ 'coc-go',
 \ 'coc-html',
 \ 'coc-json',
@@ -20,3 +21,6 @@ let g:coc_global_extensions = [
 \ 'coc-ultisnips',
 \ 'coc-yaml'
 \ ]
+
+" coc-explorer
+nnoremap <leader>e :CocCommand explorer<CR>

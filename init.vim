@@ -5,9 +5,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 syntax on
-
-" default base settings
-source settings/base.vim
+source ~/.config/nvim/settings/base.vim
 
 """ PLUGINS
 
@@ -47,8 +45,8 @@ call plug#end()
 """ END PLUGINS
 
 " settings
-source settings/coc.vim
-source settings/colors.vim
+source ~/.config/nvim/settings/coc.vim
+source ~/.config/nvim/settings/colors.vim
 
 " Rainbow parens
 let g:rainbow_active = 1
