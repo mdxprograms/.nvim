@@ -56,9 +56,6 @@ if executable('rg')
   let g:rg_derive_root='true'
 endif
 
-let loaded_matchparen = 1
-let mapleader = " "
-
 " Base mappings
 nnoremap <leader>pw :Rg <C-R>=expand("<cword>")<CR><CR>
 nnoremap <leader>phw :h <C-R>=expand("<cword>")<CR><CR>

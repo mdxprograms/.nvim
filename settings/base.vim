@@ -35,3 +35,7 @@ set updatetime=50
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
+
+let loaded_matchparen = 1
+
+let mapleader = " "
