@@ -88,7 +88,7 @@ let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
 
 " FZF
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.5, 'highlight': 'Comment' } }
+let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.95, 'highlight': 'Comment' } }
 
 " custom files
 nnoremap <Leader>nw :e ~/Dropbox/work_notes<CR>
