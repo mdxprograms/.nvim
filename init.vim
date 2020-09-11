@@ -10,6 +10,7 @@ source ~/.config/nvim/settings/base.vim
 source ~/.config/nvim/settings/plugs.vim
 source ~/.config/nvim/settings/coc.vim
 source ~/.config/nvim/settings/colors.vim
+source ~/.config/nvim/settings/fzf.vim
 
 " Rainbow parens
 let g:rainbow_active = 1
@@ -86,9 +87,6 @@ endif
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level = 2
 let g:indent_guides_guide_size = 1
-
-" FZF
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.95, 'highlight': 'Comment' } }
 
 " custom files
 nnoremap <Leader>nw :e ~/Dropbox/work_notes<CR>
