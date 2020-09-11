@@ -9,6 +9,7 @@ Plug 'heavenshell/vim-jsdoc', {
       \ 'do': 'make install'
       \}
 Plug 'honza/vim-snippets'
+Plug 'idanarye/vim-merginal'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
 Plug 'leafo/moonscript-vim'

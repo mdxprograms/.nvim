@@ -60,6 +60,9 @@ nmap <leader>gp :Gpush<space>
 nmap <leader>gl :Gpull<space>
 nmap <leader>gs :Gstatus<CR>
 
+" Merginal
+nmap <leader>gm :MerginalToggle<CR>
+
 " nerd commenter
 let g:NERDSpaceDelims = 1
 
