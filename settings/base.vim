@@ -39,3 +39,9 @@ set shortmess+=c
 let loaded_matchparen = 1
 
 let mapleader = " "
+
+" Map escape
+inoremap jf <esc>
+
+" match escape for terminal as well
+tnoremap <silent> jf <C-\><C-n>
