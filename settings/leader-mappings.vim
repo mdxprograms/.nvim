@@ -27,3 +27,6 @@ nmap <Leader>gs :Gstatus<CR>
 
 " Merginal
 nmap <Leader>gm :MerginalToggle<CR>
+
+" custom files
+nnoremap <Leader>nw :e ~/Dropbox/work_notes<CR>

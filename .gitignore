@@ -1,2 +1,7 @@
 .netrwhist
 undodir
+pack/minpac/opt/*
+pack/minpac/start/*
+!pack/minpac/opt/.keep
+!pack/minpac/start/.keep
+

@@ -1,32 +1,32 @@
-call plug#begin('~/.vim/plugged')
-Plug 'Olical/conjure'
-Plug 'SirVer/ultisnips'
-Plug 'airblade/vim-gitgutter'
-Plug 'alaviss/nim.nvim'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'heavenshell/vim-jsdoc', {
-      \ 'for': ['javascript', 'javascript.jsx','typescript'],
-      \ 'do': 'make install'
-      \}
-Plug 'honza/vim-snippets'
-Plug 'idanarye/vim-merginal'
-Plug 'jiangmiao/auto-pairs'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } } | Plug 'junegunn/fzf.vim'
-Plug 'leafo/moonscript-vim'
-Plug 'luochen1990/rainbow'
-Plug 'mattn/emmet-vim'
-Plug 'mbbill/undotree'
-Plug 'mhinz/vim-startify'
-Plug 'morhetz/gruvbox'
-Plug 'nathanaelkane/vim-indent-guides'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'preservim/nerdcommenter'
-Plug 'ryanoasis/vim-devicons'
-Plug 'sheerun/vim-polyglot'
-Plug 'stephenway/postcss.vim'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-utils/vim-man'
-call plug#end()
+packadd minpac
+
+call minpac#init()
+
+call minpac#add('Olical/conjure', {'type': 'opt'})
+call minpac#add('SirVer/ultisnips')
+call minpac#add('airblade/vim-gitgutter')
+call minpac#add('alaviss/nim.nvim', {'type': 'opt'})
+call minpac#add('fatih/vim-go', {'do': ':GoUpdateBinaries', 'type': 'opt'})
+call minpac#add('heavenshell/vim-jsdoc', {'do': 'make install'})
+call minpac#add('honza/vim-snippets')
+call minpac#add('idanarye/vim-merginal')
+call minpac#add('jiangmiao/auto-pairs')
+call minpac#add('junegunn/fzf', {'do': {-> fzf#install() } })
+call minpac#add('junegunn/fzf.vim')
+call minpac#add('leafo/moonscript-vim', {'type': 'opt'})
+call minpac#add('luochen1990/rainbow')
+call minpac#add('mattn/emmet-vim')
+call minpac#add('mbbill/undotree')
+call minpac#add('mhinz/vim-startify')
+call minpac#add('morhetz/gruvbox')
+call minpac#add('nathanaelkane/vim-indent-guides')
+call minpac#add('neoclide/coc.nvim', {'branch': 'release'})
+call minpac#add('preservim/nerdcommenter')
+call minpac#add('ryanoasis/vim-devicons')
+call minpac#add('sheerun/vim-polyglot')
+call minpac#add('stephenway/postcss.vim', {'type': 'opt'})
+call minpac#add('tpope/vim-dispatch')
+call minpac#add('tpope/vim-fugitive')
+call minpac#add('tpope/vim-surround')
+call minpac#add('vim-airline/vim-airline')
+call minpac#add('vim-utils/vim-man')
