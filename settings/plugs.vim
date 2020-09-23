@@ -2,7 +2,6 @@ packadd minpac
 
 call minpac#init()
 
-call minpac#add('Olical/conjure')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('alaviss/nim.nvim')
@@ -31,3 +30,4 @@ call minpac#add('tpope/vim-surround')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('radenling/vim-dispatch-neovim')
 call minpac#add('vim-utils/vim-man')
+call minpac#add('romainl/vim-devdocs')
