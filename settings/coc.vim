@@ -1,6 +1,5 @@
 " CocExtensions
 let g:coc_global_extensions = [
-\ 'coc-conjure-olical',
 \ 'coc-css',
 \ 'coc-emmet',
 \ 'coc-eslint',
