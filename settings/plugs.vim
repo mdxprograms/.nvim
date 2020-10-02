@@ -2,6 +2,7 @@ packadd minpac
 
 call minpac#init()
 
+call minpac#add('LnL7/vim-nix')
 call minpac#add('SirVer/ultisnips')
 call minpac#add('airblade/vim-gitgutter')
 call minpac#add('alaviss/nim.nvim')
